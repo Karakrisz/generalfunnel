@@ -12,7 +12,7 @@ export default defineNuxtPlugin(() => {
     window.gtag = gtag
 
     gtag('js', new Date())
-    // gtag('config', 'G-VZF3V90PW7')
+    gtag('config', 'G-5SRVCK6Z8D')
     gtag('config', 'AW-17964010415')
 
     gtag('config', 'AW-17964010415/ITK5COrC7_4bEK-X9PVC', {
