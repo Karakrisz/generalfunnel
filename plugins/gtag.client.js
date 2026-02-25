@@ -15,8 +15,8 @@ export default defineNuxtPlugin(() => {
     // gtag('config', 'G-VZF3V90PW7')
     gtag('config', 'AW-17964010415')
 
-    // gtag('config', 'AW-17873077995/AjSoCPSA3P4bEOuNxspC', {
-    //   phone_conversion_number: '+36203475029',
-    // })
+    gtag('config', 'AW-17964010415/ITK5COrC7_4bEK-X9PVC', {
+      phone_conversion_number: '+36 20 347 5029',
+    })
   }
 })
