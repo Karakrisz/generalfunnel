@@ -2,7 +2,7 @@ export default defineNuxtPlugin(() => {
   if (process.client) {
     const script = document.createElement('script')
     script.async = true
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17873077995'
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17964010415'
     document.head.appendChild(script)
 
     window.dataLayer = window.dataLayer || []
@@ -12,11 +12,11 @@ export default defineNuxtPlugin(() => {
     window.gtag = gtag
 
     gtag('js', new Date())
-    gtag('config', 'G-VZF3V90PW7')
-    gtag('config', 'AW-17873077995')
+    // gtag('config', 'G-VZF3V90PW7')
+    gtag('config', 'AW-17964010415')
 
-    gtag('config', 'AW-17873077995/AjSoCPSA3P4bEOuNxspC', {
-      phone_conversion_number: '+36203475029',
-    })
+    // gtag('config', 'AW-17873077995/AjSoCPSA3P4bEOuNxspC', {
+    //   phone_conversion_number: '+36203475029',
+    // })
   }
 })
