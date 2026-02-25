@@ -1,0 +1,60 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  devtools: { enabled: true },
+  css: ['~/assets/css/app.scss'],
+  ssr: true,
+
+  app: {
+    head: {
+      title:
+        'Lakás- és házfelújítás, generálkivitelezés | ReBaco Kft. – Budapest és 50 km-es körzete',
+      htmlAttrs: {
+        lang: 'hu',
+      },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Kovács Balázs, ReBaco Kft. Ügyvezető. Lakások és házak felújítása, generálkivitelezés Budapesten és 50 km-es körzetében. Ajánlatkérés gyorsan, visszahívással. Telefon: +36 20 347 5029.',
+        },
+        { name: 'format-detection', content: 'telephone=no' },
+        { hid: 'robots', name: 'robots', content: 'index, follow' },
+        {
+          'http-equiv': 'Content-Security-Policy',
+          content: `
+            default-src 'self' https: data:;
+            img-src 'self' https: http: data:;
+            font-src 'self' https: data:;
+            style-src 'self' https: 'unsafe-inline';
+            script-src 'self' https: http://www.gstatic.com 'unsafe-inline' 'unsafe-eval';
+          `,
+        },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'canonical',
+          href: '',
+        },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Bakbak+One&family=Raleway:wght@400;500;600;700&display=swap',
+        },
+      ],
+    },
+  },
+
+  modules: ['@nuxt/image', '@nuxtjs/sitemap'],
+
+  site: {
+    url: '',
+    trailingSlash: true,
+  },
+
+  compatibilityDate: '2025-01-21',
+})
