@@ -263,7 +263,7 @@ onMounted(() => {
             <p class="banner-proof">
               <strong>Kovács Balázs vagyok</strong>, a
               <strong>ReBaco Kft.</strong>
-              ügyvezetője.
+              kivitelezési szakértője.
             </p>
             <p class="banner-subtitle">
               <i class="supage-content__p__i"
@@ -463,8 +463,8 @@ onMounted(() => {
             <strong>Prémium keret:</strong>
             Generálkivitelezést jellemzően
             <strong>8–10 millió Ft feletti</strong> projekteknél vállalunk.
-            Kisebb munkáknál is segítünk, de nem minden esetben mi vagyunk a
-            legjobb választás.
+            Kisebb munkáknál is tudunk segíteni — egy rövid egyeztetés után
+            megmondjuk, belefér-e a projekt a működésünkbe. A felmérés díjmentes. 
           </p>
         </div>
 
