@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 
 useHead({
   title:
-    'Lakás- és házfelújítás, generálkivitelezés | ReBaco Kft. – Budapest és 50 km-es körzete',
+    'Kőműves munkák árak, bontás, falazás | ReBaco Kft. – Budapest és 50 km',
 })
 
 // ====== GOOGLE ADS TRACKING ======
@@ -51,7 +51,7 @@ const formData = ref({
   licensePlate: '',
   brand: '',
   model: '',
-  service: '',
+  service: 'komuves_munkak',
   name: '',
   email: '',
   phone: '',
@@ -182,41 +182,6 @@ const initPage = () => {
 onMounted(() => {
   initPage()
 })
-
-const services = [
-  {
-    to: '/burkolas',
-    title: 'Burkolás',
-    desc: 'Hideg- és melegburkolás, fürdőszoba, terasz',
-  },
-  {
-    to: '/festes',
-    title: 'Festés',
-    desc: 'Beltéri festés, glettelés, homlokzat',
-  },
-  {
-    to: '/generalkivitelzes',
-    title: 'Generál kivitelezés',
-    desc: 'Teljes lakás vagy ház felújítás',
-  },
-  {
-    to: '/komuvesmunkak',
-    title: 'Kőműves munkák',
-    desc: 'Falazás, bontás, szerkezetépítés',
-  },
-  {
-    to: '/acs-tetofedes',
-    title: 'Ács- és tetőfedő munkák',
-    desc: 'Tetőjavítás, szerkezet',
-  },
-  {
-    to: '/vizeshoszigeteles',
-    title: 'Víz- és hőszigetelések',
-    desc: 'Külső hőszigetelés, vízszigetelés',
-  },
-]
-
-const showOnlyServiceSelector = true
 </script>
 
 <template>
@@ -226,500 +191,373 @@ const showOnlyServiceSelector = true
     >
       <span class="dom-phone-number" aria-hidden="true">+36 20 347 5029</span>
       <div class="subpage-content">
-        <div v-if="showOnlyServiceSelector" class="service-selector">
-          <h1 class="service-selector__title">
-            Burkolás, festés vagy teljes felújítás?
-          </h1>
-          <p class="service-selector__subtitle">
-            Válassza ki a tervezett munkát, és megmutatjuk a következő lépést —
-            így gyorsabban kap egy reális árat.
-          </p>
+        <!-- HERO BANNER -->
+        <div class="trust-banner trust-banner--with-image">
+          <div class="banner-bg-image">
+            <NuxtImg
+              src="/img/hero.svg"
+              alt="Kőműves munkák Budapesten – tételes árajánlattal, megbízható kivitelezéssel – ReBaco Kft."
+              class="banner-image"
+              width="1200"
+              height="600"
+            />
+          </div>
 
-          <div class="service-selector__grid">
-            <NuxtLink
-              v-for="s in services"
-              :key="s.to"
-              :to="s.to"
-              class="service-selector__card"
-            >
-              <span class="service-selector__card-title">{{ s.title }}</span>
-              <span class="service-selector__card-desc">{{ s.desc }}</span>
-            </NuxtLink>
+          <div class="banner-content">
+            <h1 class="main-title">
+              Kőműves munkák Budapesten – pontos, tételes árajánlattal
+            </h1>
+            <div class="keyword-chips" aria-label="Fő előnyök">
+              <span class="keyword-chip">Tételes ajánlat</span>
+              <span class="keyword-chip">Rejtett költségek nélkül</span>
+              <span class="keyword-chip">Pontos egyeztetés</span>
+            </div>
+            <p class="banner-proof">
+              <strong>Kovács Balázs vagyok</strong>, a
+              <strong>ReBaco Kft.</strong>
+              kivitelezési szakértője.
+            </p>
+            <p class="banner-subtitle">
+              <i class="supage-content__p__i"
+                >Ne csak egy "m2 árat" vagy egy bemondott összeget kapjon –
+                hanem pontos képet arról, mi mennyibe kerül és miért.</i
+              >
+            </p>
+            <p class="banner-value-prop">
+              Ha most kőműves munkák árat keres (bontás, falazás, vakolat
+              javítás, nyíláskiváltás, kisebb szerkezeti munkák), egy gyors
+              egyeztetés után
+              <strong>reális ársávot</strong> tudunk mondani — majd
+              <strong>tételes</strong> ajánlatot adunk.
+            </p>
+            <p class="banner-value-prop">
+              Célunk, hogy kőműves munkáknál se legyen "majd a végén meglátjuk"
+              — hanem előre egyeztetett műszaki tartalom és tiszta költségek.
+            </p>
           </div>
         </div>
 
-        <div v-else>
-          <!-- HERO BANNER -->
-          <div class="trust-banner trust-banner--with-image">
-            <div class="banner-bg-image">
-              <NuxtImg
-                src="/img/hero.svg"
-                alt="Stresszmentes felújítás és generálkivitelezés – ReBaco Kft."
-                class="banner-image"
-                width="1200"
-                height="600"
-              />
-            </div>
-
-            <div class="banner-content">
-              <h1 class="main-title">
-                Stresszmentes felújítás – írásos ütemezéssel és kontrollal
-              </h1>
-              <div class="keyword-chips" aria-label="Fő előnyök">
-                <span class="keyword-chip">Írásos ütemterv</span>
-                <span class="keyword-chip">Tételes költségvetés</span>
-                <span class="keyword-chip">Dedikált projektfelelős</span>
-                <span class="keyword-chip">Szerződéses vállalások</span>
-              </div>
-              <p class="banner-proof">
-                <strong>Kovács Balázs vagyok</strong>, a
-                <strong>ReBaco Kft.</strong>
-                kivitelezési szakértője.
-              </p>
-              <p class="banner-subtitle">
-                <i class="supage-content__p__i"
-                  >Írásos ütemtervvel, tételes költségvetéssel és folyamatos
-                  projektkommunikációval dolgozunk.</i
-                >
-              </p>
-              <p class="banner-value-prop">
-                Akkor érdemes velünk beszélni, ha fontos Önnek a
-                <strong>kiszámíthatóság</strong>: mit csinálunk pontosan, mikor,
-                és mennyiért – utólagos meglepetések nélkül.
-              </p>
-              <p class="banner-status">
-                <strong>Budapesten és 50 km-es körzetében</strong> vállalunk
-                munkát.
-              </p>
-              <p class="banner-status">
-                <strong>2018 óta</strong> több tucat sikeres projekt Budapesten
-                és környékén.
-              </p>
-              <p class="banner-value-prop">
-                Olyan kivitelezés, ahol pontosan tudja, mikor mi történik – és
-                nem kell naponta telefonálnia.
+        <!-- BIZALOM MODUL -->
+        <div class="trust-module">
+          <div class="trust-item">
+            <div class="trust-content">
+              <h4>Gyors árkép — valós tartalom alapján</h4>
+              <p>
+                Pár kérdés alapján megmondjuk, mi a reális irány — és mire kell
+                figyelni, hogy ne csússzon el a költség.
               </p>
             </div>
           </div>
-
-          <!-- BIZALOM MODUL -->
-          <div class="trust-module">
-            <div class="trust-item">
-              <div class="trust-content">
-                <h4>Nyugalom és kontroll – nem találgatás</h4>
-                <p>
-                  A folyamatot írásban átláthatóvá tesszük: mi a következő
-                  lépés, ki a felelős, és milyen döntést várunk Öntől.
-                </p>
-              </div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-content">
-                <h4>Tételes költségvetés – kevesebb alkudozás</h4>
-                <p>
-                  Nem “nagyjából” árazunk. Tételesen egyeztetünk, hogy előre
-                  lássa, mi fér bele a keretbe – és mi az, ami plusz.
-                </p>
-              </div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-content">
-                <h4>Dedikált projektfelelős – egy kapcsolattartó</h4>
-                <p>
-                  Nem kell több emberrel zsonglőrködni. Van felelőse a
-                  projektnek, akivel egyeztet – és aki viszi végig a folyamatot.
-                </p>
-              </div>
+          <div class="trust-item">
+            <div class="trust-content">
+              <h4>Tételes ajánlat — kevesebb meglepetés</h4>
+              <p>
+                Nem csak egy m2 ár. Tételesen látja a munkadíjat, az
+                előkészítést és a kiegészítő tételeket is.
+              </p>
             </div>
           </div>
-
-          <div class="includes-section">
-            <h2 class="section-heading">Mitől más a ReBaco?</h2>
-            <div class="includes-grid">
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span
-                  >Stabil szakembergárda és koordinált alvállalkozói kör</span
-                >
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Projektfelelős rendszer – egy kézben a kommunikáció</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span
-                  >Átlátható döntési pontok – rejtett költségek helyett
-                  kontroll</span
-                >
-              </div>
+          <div class="trust-item">
+            <div class="trust-content">
+              <h4>Megbízható kivitelezés — tiszta kommunikáció</h4>
+              <p>
+                Végig tudja, mi történik és mikor. Az egyeztetés célja, hogy
+                nyugodtan döntsön — nem az, hogy rábeszéljük.
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="includes-section">
-            <h2 class="section-heading">Szolgáltatásaink</h2>
-            <div class="includes-grid">
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Generál kivitelezés</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Mérnöki tevékenység</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Műszaki tanácsadás</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Statikai tervek optimalizálása</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Szerkezetépítés</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Fit-out</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Festés, burkolás, kartonozás</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Épületgépészet</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Villamos szerelési munkák</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Acélszerkezetek</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Kőműves munkák</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Ács- és tetőfedő munkák</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Víz- és hőszigetelések</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Szerkezet megerősítések</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Aljzatképzés</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- HOGYAN MŰKÖDIK SECTION -->
-          <div class="process-section">
-            <h2 class="section-heading">Hogyan lesz nyugodt a kivitelezés?</h2>
-            <div class="process-steps">
-              <div class="process-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                  <h4>Megértjük a célt</h4>
-                  <p>
-                    Röviden átbeszéljük, mi a cél (felújítás, átépítés,
-                    bővítés), és mi az, amit mindenképp el szeretne kerülni.
-                  </p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                  <h4>Realitásokat pontosítunk</h4>
-                  <p>
-                    Gyorsan tisztázzuk a műszaki kereteket és a határidőt.
-                    Megmondjuk, mi reális – és mi az, ami később csúszást vagy
-                    rejtett költséget okozna.
-                  </p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                  <h4>Átlátható ajánlatot adunk</h4>
-                  <p>
-                    Tételes költségvetést és ütemezést kap, hogy előre lássa a
-                    döntési pontokat és a várható költségeket.
-                  </p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                  <h4>Nyugodt, kontrollált kivitelezés</h4>
-                  <p>
-                    A projektfelelős koordinálja a munkát, Ön pedig folyamatosan
-                    látja, hol tartunk az ütemezésben. A végén közös
-                    átadás-átvétellel zárunk.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="safety-bridge">
-            <p class="safety-bridge__text">
-              <strong>Prémium keret:</strong>
-              Generálkivitelezést jellemzően
-              <strong>8–10 millió Ft feletti</strong> projekteknél vállalunk.
-              Kisebb munkáknál is tudunk segíteni — egy rövid egyeztetés után
-              megmondjuk, belefér-e a projekt a működésünkbe. A felmérés
-              díjmentes.
-            </p>
-          </div>
-
-          <div class="includes-section">
-            <h2 class="section-heading">Megrendelőink</h2>
-            <div class="includes-grid">
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>CTP Management Hungary Kft.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>BOHN Mélyépítő Kft.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>West Hungaria Bau Kft.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Máltai Szeretetszolgálat</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Üjlaki Építő Kft.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Transport 2000. Kft.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>OMS 24 Zrt.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Land-Bau Kft.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Progress Étterem-hálózat Kft.</span>
-              </div>
-              <div class="include-item">
-                <span class="include-check">✓</span>
-                <span>Magánszemélyek</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ZÁRÓ CTA SECTION -->
-          <div class="closing-cta-section">
-            <h2 class="section-heading">
-              Szeretne egy reális kivitelezési tervet?
-            </h2>
-            <p class="closing-message">
-              <i
-                >Az egyeztetés nem jár kötelezettséggel. Ha nem mi vagyunk a
-                legjobb választás, ezt is őszintén megmondjuk.</i
+        <div class="includes-section">
+          <h2 class="section-heading">Mennyibe kerül a kőműves munka?</h2>
+          <div class="includes-grid">
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span
+                >Az ár függ a munka jellegétől, a felület/anyag
+                állapotától</span
               >
-            </p>
-            <p class="closing-message">
-              Rövid egyeztetés után megmondjuk, mi a reális műszaki megoldás,
-              milyen ütemezéssel számoljon, és milyen költségkeretben érdemes
-              gondolkodni. <br /><br />
-              <i
-                ><strong>Ha szeretné, készítünk egy tiszta tervet:</strong>
-                töltse ki az űrlapot, és visszahívjuk egyeztetésre. Ha gyors
-                kérdése van, telefonáljon.</i
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span
+                >Előkészítés: bontás, sitt elszállítás, előkészítő munkák sokat
+                számít</span
               >
-            </p>
-          </div>
-
-          <!-- CONTACT METHOD CHOICE -->
-          <div class="safety-bridge">
-            <p class="safety-bridge__text">
-              <strong>Minden felújítás más.</strong>
-              Az egyeztetés során végigkérdezzük a részleteket, és őszintén
-              megmondjuk, mi a reális műszaki és ütemezési megoldás.
-            </p>
-          </div>
-
-          <div class="contact-choice">
-            <p class="choice-intro">Válassza ki, hogyan egyeztessünk.</p>
-            <div class="choice-buttons">
-              <button
-                class="choice-btn choice-btn--phone"
-                :class="{ active: contactMethod === 'phone' }"
-                @click="contactMethod = 'phone'"
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span
+                >Részletek: csatlakozások, kiváltások, javítások,
+                helyreállítások</span
               >
-                <span class="choice-icon">☎️</span>
-                <span class="choice-text"
-                  >Kérek egy gyors terv-egyeztetést</span
-                >
-              </button>
-              <button
-                class="choice-btn choice-btn--form"
-                :class="{ active: contactMethod === 'form' }"
-                @click="contactMethod = 'form'"
-              >
-                <span class="choice-icon">📝</span>
-                <span class="choice-text"
-                  >Szeretnék reális kivitelezési tervet</span
-                >
-              </button>
             </div>
           </div>
+          <p class="price-bridge">
+            Szeretne gyors ár-sávot tudni? Kérjen a lap alján visszahívást.
+          </p>
+        </div>
 
-          <!-- PHONE CARD -->
-          <div v-if="contactMethod === 'phone'" class="contact-section">
-            <div class="phone-card">
-              <div class="phone-card-icon">☎️</div>
-              <h3 class="phone-card-title">Hívjon most — egyeztessünk</h3>
-              <p class="phone-card-subtitle">
-                ReBaco Kft. – generálkivitelezés és felújítás Budapesten és
-                környékén
-              </p>
-              <a href="tel:+36203475029" class="phone-button">
-                <span class="phone-icon">📞</span>
-                <span class="phone-number">+36 20 347 5029</span>
-              </a>
-              <div class="phone-info">
+        <!-- HOGYAN MŰKÖDIK SECTION -->
+        <div class="process-section">
+          <h2 class="section-heading">Hogyan dolgozunk kőműves munkáknál?</h2>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Gyors egyeztetés</h4>
                 <p>
-                  <strong>Gyors egyeztetés telefonon</strong>
-                </p>
-                <p class="small">
-                  Cél, keret, ütemezés – és mondjuk a következő lépést
+                  Mi a cél (bontás, falazás, javítás), mekkora a terület, és
+                  mikor szeretné — pár perc alatt tisztázzuk az alapokat.
                 </p>
               </div>
-              <div class="phone-benefits">
-                <div class="benefit">✓ Lakás- és házfelújítás</div>
-                <div class="benefit">✓ Generálkivitelezés egy kézben</div>
-                <div class="benefit">✓ Budapest + 50 km</div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Helyszíni felmérés</h4>
+                <p>
+                  Megnézzük a szerkezetet, a falakat, a csatlakozásokat és a
+                  kritikus pontokat (repedések, vizesedés, teherhordó kérdések).
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Tételes ajánlat</h4>
+                <p>
+                  Írásos, érthető ajánlatot kap — így tud "m2 ár" helyett valódi
+                  műszaki tartalom alapján dönteni.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Kivitelezés és átadás</h4>
+                <p>
+                  Bontás/falazás/javítás — megbeszélt ütemezés szerint. A végén
+                  közös átadás-átvétellel zárunk.
+                </p>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- FORM -->
-          <div v-if="contactMethod === 'form'" class="contact-section">
-            <form class="appointment-form" @submit="submitForm">
-              <div class="form-section">
-                <h3 class="section-title">Miben segíthetünk?</h3>
+        <div class="includes-section">
+          <h2 class="section-heading">
+            Akik már minket választottak kőműves és kivitelezési munkáknál
+          </h2>
+          <div class="includes-grid">
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>CTP Management Hungary Kft.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>BOHN Mélyépítő Kft.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>West Hungaria Bau Kft.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Máltai Szeretetszolgálat</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Üjlaki Építő Kft.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Transport 2000. Kft.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>OMS 24 Zrt.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Land-Bau Kft.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Progress Étterem-hálózat Kft.</span>
+            </div>
+            <div class="include-item">
+              <span class="include-check">✓</span>
+              <span>Magánszemélyek</span>
+            </div>
+          </div>
+        </div>
 
-                <div class="form-group">
-                  <label class="supage-content__ul__li__strong"
-                    >Szolgáltatás *</label
-                  >
-                  <select
-                    v-model="formData.service"
-                    required
-                    class="form-select"
-                    :disabled="isSubmitting"
-                  >
-                    <option value="">Válasszon szolgáltatást...</option>
-                    <option value="general_kivitelezes">
-                      Generál kivitelezés
-                    </option>
-                    <option value="mernoki_tevekenyseg">
-                      Mérnöki tevékenység
-                    </option>
-                    <option value="muszaki_tanacsadas">
-                      Műszaki tanácsadás
-                    </option>
-                    <option value="statikai_tervek_opt">
-                      Statikai tervek optimalizálása
-                    </option>
-                    <option value="szerkezetepites">Szerkezetépítés</option>
-                    <option value="fit_out">Fit-out</option>
-                    <option value="festes_burkolas_kartonozas">
-                      Festés, burkolás, kartonozás
-                    </option>
-                    <option value="epuletgepeszet">Épületgépészet</option>
-                    <option value="villamos_szereles">
-                      Villamos szerelési munkák
-                    </option>
-                    <option value="acelszerkezetek">Acélszerkezetek</option>
-                    <option value="komuves_munkak">Kőműves munkák</option>
-                    <option value="acs_tetofedo">
-                      Ács- és tetőfedő munkák
-                    </option>
-                    <option value="viz_hoszigetelesek">
-                      Víz- és hőszigetelések
-                    </option>
-                    <option value="szerkezet_megerositesek">
-                      Szerkezet megerősítések
-                    </option>
-                    <option value="aljzatkepzes">Aljzatképzés</option>
-                    <option value="egyeb">Egyéb</option>
-                  </select>
-                </div>
+        <!-- ZÁRÓ CTA SECTION -->
+        <div class="closing-cta-section">
+          <h2 class="section-heading">
+            Kér egy gyors, reális kőműves ár-becslést?
+          </h2>
+          <p class="closing-message">
+            <strong
+              >Az egyeztetés nem jár kötelezettséggel. Ha nem mi vagyunk a
+              legjobb megoldás az Ön kőműves munkájához, ezt is őszintén
+              megmondjuk.</strong
+            >
+          </p>
+          <p class="closing-message">
+            Rövid egyeztetés után megmondjuk, mi befolyásolja leginkább az árat,
+            milyen műszaki tartalommal érdemes számolni, és hogyan lehet
+            elkerülni a plusz tételeket. <br /><br />
+            <i
+              ><strong
+                >Ha szeretné, készítünk egy tiszta, tételes ajánlatot:</strong
+              >
+              töltse ki az űrlapot, és visszahívjuk egyeztetésre. Ha gyors
+              kérdése van, telefonáljon.</i
+            >
+          </p>
+        </div>
+
+        <!-- CONTACT METHOD CHOICE -->
+        <div class="safety-bridge">
+          <p class="safety-bridge__text">
+            <strong>Minden kőműves munka más.</strong>
+            Az egyeztetés során végigkérdezzük a részleteket
+            (bontás/falazás/javítás, hozzáférés, sitt), és őszintén megmondjuk,
+            mi a reális megoldás.
+          </p>
+        </div>
+
+        <div class="contact-choice">
+          <p class="choice-intro">
+            Válassza ki, hogyan egyeztessünk kőműves munkákról.
+          </p>
+          <div class="choice-buttons">
+            <button
+              class="choice-btn choice-btn--phone"
+              :class="{ active: contactMethod === 'phone' }"
+              @click="contactMethod = 'phone'"
+            >
+              <span class="choice-icon">☎️</span>
+              <span class="choice-text"
+                >Kérek gyors egyeztetést kőműves munkákról</span
+              >
+            </button>
+            <button
+              class="choice-btn choice-btn--form"
+              :class="{ active: contactMethod === 'form' }"
+              @click="contactMethod = 'form'"
+            >
+              <span class="choice-icon">📝</span>
+              <span class="choice-text"
+                >Szeretnék tételes kőműves ajánlatot</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <!-- PHONE CARD -->
+        <div v-if="contactMethod === 'phone'" class="contact-section">
+          <div class="phone-card">
+            <div class="phone-card-icon">☎️</div>
+            <h3 class="phone-card-title">Hívjon most — egyeztessünk</h3>
+            <p class="phone-card-subtitle">
+              ReBaco Kft. – kőműves munkák Budapesten és környékén
+            </p>
+            <a href="tel:+36203475029" class="phone-button">
+              <span class="phone-icon">📞</span>
+              <span class="phone-number">+36 20 347 5029</span>
+            </a>
+            <div class="phone-info">
+              <p>
+                <strong>Gyors egyeztetés kőműves munkákról</strong>
+              </p>
+              <p class="small">
+                Bontás, falazás, javítás – és mondjuk a következő lépést
+              </p>
+            </div>
+            <div class="phone-benefits">
+              <div class="benefit">✓ Bontás és falazás</div>
+              <div class="benefit">✓ Javítások, helyreállítás</div>
+              <div class="benefit">✓ Budapest + 50 km</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div v-if="contactMethod === 'form'" class="contact-section">
+          <form class="appointment-form" @submit="submitForm">
+            <div class="form-section">
+              <h3 class="section-title">Milyen szolgáltatásra van szüksége?</h3>
+
+              <div class="form-group">
+                <label class="supage-content__ul__li__strong"
+                  >Szolgáltatás *</label
+                >
+                <select
+                  v-model="formData.service"
+                  required
+                  class="form-select"
+                  :disabled="isSubmitting"
+                >
+                  <option value="">Válasszon szolgáltatást...</option>
+                  <option value="komuves_munkak">
+                    Kőműves munkák – Bontás, falazás, javítás, helyreállítás
+                  </option>
+                  <option value="egyeb">Egyéb</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3 class="section-title">Elérhetőségek</h3>
+
+              <div class="form-group">
+                <label class="supage-content__ul__li__strong">Név *</label>
+                <input
+                  type="text"
+                  v-model="formData.name"
+                  required
+                  class="form-input"
+                  placeholder="Keresztnév és vezetéknév"
+                  :disabled="isSubmitting"
+                />
               </div>
 
-              <div class="form-section">
-                <h3 class="section-title">
-                  Add meg az elérhetőséged – visszahívunk
-                </h3>
-
-                <div class="form-group">
-                  <label class="supage-content__ul__li__strong">Név *</label>
-                  <input
-                    type="text"
-                    v-model="formData.name"
-                    required
-                    class="form-input"
-                    placeholder="Keresztnév és vezetéknév"
-                    :disabled="isSubmitting"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="supage-content__ul__li__strong"
-                    >Email cím *</label
-                  >
-                  <input
-                    type="email"
-                    v-model="formData.email"
-                    required
-                    class="form-input"
-                    placeholder="Email cím"
-                    :disabled="isSubmitting"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="supage-content__ul__li__strong"
-                    >Telefonszám *</label
-                  >
-                  <input
-                    type="tel"
-                    v-model="formData.phone"
-                    required
-                    class="form-input"
-                    placeholder="Telefonszám (visszahívunk)"
-                    :disabled="isSubmitting"
-                  />
-                </div>
+              <div class="form-group">
+                <label class="supage-content__ul__li__strong"
+                  >Email cím *</label
+                >
+                <input
+                  type="email"
+                  v-model="formData.email"
+                  required
+                  class="form-input"
+                  placeholder="Email cím"
+                  :disabled="isSubmitting"
+                />
               </div>
 
-              <div class="form-section">
-                <h3 class="section-title">Hol van az ingatlan, és mi a cél?</h3>
+              <div class="form-group">
+                <label class="supage-content__ul__li__strong"
+                  >Telefonszám *</label
+                >
+                <input
+                  type="tel"
+                  v-model="formData.phone"
+                  required
+                  class="form-input"
+                  placeholder="Telefonszám"
+                  :disabled="isSubmitting"
+                />
+              </div>
+            </div>
 
-                <!-- <div class="form-group">
+            <div class="form-section">
+              <h3 class="section-title">Hol van az ingatlan, és mi a cél?</h3>
+
+              <!-- <div class="form-group">
                 <label class="supage-content__ul__li__strong"
                   >Település / kerület *</label
                 >
@@ -748,50 +586,48 @@ const showOnlyServiceSelector = true
                 />
               </div> -->
 
-                <div class="form-group">
-                  <label class="supage-content__ul__li__strong"
-                    >Munka röviden *</label
-                  >
-                  <input
-                    type="text"
-                    v-model="formData.model"
-                    required
-                    class="form-input"
-                    placeholder="pl. teljes felújítás, festés + burkolás, fürdő csere"
-                    :disabled="isSubmitting"
-                  />
-                </div>
-              </div>
-
-              <button type="submit" class="submit-btn" :disabled="isSubmitting">
-                <span class="btn-text" v-if="!isSubmitting"
-                  >Kérem a reális tervet</span
+              <div class="form-group">
+                <label class="supage-content__ul__li__strong"
+                  >Munka röviden ( nem kötelező )</label
                 >
-                <span class="btn-text" v-else>Küldés...</span>
-              </button>
-
-              <p class="privacy-text">
-                <i class="supage-content__p__i">
-                  Az űrlap elküldésével automatikusan elfogadja az
-                  <NuxtLink
-                    class="supage-content__nlink"
-                    to="/adatvedelmi-tajekoztato"
-                    >Adatvédelmi Szabályzatot.</NuxtLink
-                  >
-                </i>
-              </p>
-            </form>
-
-            <div
-              v-if="submitMessage"
-              class="submit-message"
-              :class="{
-                success: submitMessage.includes('✅'),
-                error: submitMessage.includes('❌'),
-              }"
-            >
-              {{ submitMessage }}
+                <input
+                  type="text"
+                  v-model="formData.model"
+                  class="form-input"
+                  placeholder="pl. falbontás + helyreállítás, válaszfal, vakolat javítás"
+                  :disabled="isSubmitting"
+                />
+              </div>
             </div>
+
+            <button type="submit" class="submit-btn" :disabled="isSubmitting">
+              <span class="btn-text" v-if="!isSubmitting"
+                >Kérek gyors kőműves ár becslést</span
+              >
+              <span class="btn-text" v-else>Küldés...</span>
+            </button>
+
+            <p class="privacy-text">
+              <i class="supage-content__p__i">
+                Az űrlap elküldésével automatikusan elfogadja az
+                <NuxtLink
+                  class="supage-content__nlink"
+                  to="/adatvedelmi-tajekoztato"
+                  >Adatvédelmi Szabályzatot.</NuxtLink
+                >
+              </i>
+            </p>
+          </form>
+
+          <div
+            v-if="submitMessage"
+            class="submit-message"
+            :class="{
+              success: submitMessage.includes('✅'),
+              error: submitMessage.includes('❌'),
+            }"
+          >
+            {{ submitMessage }}
           </div>
         </div>
       </div>
@@ -828,71 +664,6 @@ body > footer {
   --primary-rgb: 162, 20, 30;
   --accent: #ff9500;
   --text: #000;
-}
-
-.service-selector {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 2em 0;
-}
-
-.service-selector__title {
-  font-family: 'Bakbak One', sans-serif;
-  font-size: 2rem;
-  color: var(--primary);
-  text-align: center;
-  margin: 0 0 0.6em 0;
-}
-
-.service-selector__subtitle {
-  text-align: center;
-  color: #222;
-  margin: 0 0 1.75em 0;
-  font-weight: 600;
-}
-
-.service-selector__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
-}
-
-.service-selector__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 18px 16px;
-  border-radius: 12px;
-  background: var(--primary);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-  border: 2px solid var(--primary);
-  transition: all 0.2s ease;
-  min-height: 72px;
-}
-
-.service-selector__card:hover {
-  background: #fff;
-  color: var(--primary);
-  transform: translateY(-2px);
-}
-
-.service-selector__card-title {
-  font-family: 'Bakbak One', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.25;
-}
-
-.service-selector__card-desc {
-  margin-top: 6px;
-  font-size: 0.92rem;
-  line-height: 1.25;
-  opacity: 0.92;
-  font-weight: 700;
 }
 
 /* ========== HERO BANNER ========== */
@@ -1130,6 +901,13 @@ body > footer {
 /* ========== INCLUDES SECTION ========== */
 .includes-section {
   margin: 4em 0;
+}
+
+.price-bridge {
+  margin: 18px 0 0 0;
+  text-align: center;
+  color: #222;
+  font-weight: 800;
 }
 
 .includes-grid {

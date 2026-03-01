@@ -2471,10 +2471,28 @@ const sources$1 = [
         },
         "urls": [
             {
+                "loc": "/acs-tetofedes"
+            },
+            {
                 "loc": "/adatvedelmi-tajekoztato"
             },
             {
+                "loc": "/burkolas"
+            },
+            {
+                "loc": "/festes"
+            },
+            {
+                "loc": "/generalkivitelzes"
+            },
+            {
                 "loc": "/"
+            },
+            {
+                "loc": "/komuvesmunkak"
+            },
+            {
+                "loc": "/vizeshoszigeteles"
             }
         ],
         "sourceType": "app"
