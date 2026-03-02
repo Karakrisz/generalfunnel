@@ -13,11 +13,15 @@ h2 {
 
 /* Disable zoom on all touch interactions */
 * {
-  -webkit-user-scalable: no !important;
-  -moz-user-scalable: no !important;
-  -ms-user-scalable: no !important;
-  user-scalable: no !important;
   touch-action: manipulation !important;
+}
+
+@media (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
 }
 
 .d-none {
