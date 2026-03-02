@@ -11,6 +11,46 @@ h2 {
   font-size: 10px;
 }
 
+/* Disable zoom on all touch interactions */
+* {
+  -webkit-user-scalable: no !important;
+  -moz-user-scalable: no !important;
+  -ms-user-scalable: no !important;
+  user-scalable: no !important;
+  touch-action: manipulation !important;
+}
+
+.d-none {
+  display: none;
+}
+
+.choice-phone-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: -12px 0 22px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.choice-phone-inline__label {
+  opacity: 0.85;
+}
+
+.choice-phone-inline__link {
+  color: #a2141e;
+  text-decoration: none;
+  font-family: 'Bakbak One', sans-serif;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.choice-phone-inline__link:hover {
+  text-decoration: underline;
+}
+
 // Mixins
 @mixin flex-center {
   display: flex;
@@ -236,7 +276,7 @@ ul {
 }
 
 .hero-container {
-  top: 50%; 
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   &__content {

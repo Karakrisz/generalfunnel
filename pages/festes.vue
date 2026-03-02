@@ -207,7 +207,7 @@ onMounted(() => {
             <h1 class="main-title">
               Festés Budapesten – pontos, tételes árajánlattal
             </h1>
-            <div class="keyword-chips" aria-label="Fő előnyök">
+            <!-- <div class="keyword-chips" aria-label="Fő előnyök">
               <span class="keyword-chip">Tételes ajánlat</span>
               <span class="keyword-chip">Rejtett költségek nélkül</span>
               <span class="keyword-chip">Pontos egyeztetés</span>
@@ -232,7 +232,7 @@ onMounted(() => {
             <p class="banner-value-prop">
               Célunk, hogy festésnél se legyen "majd a végén meglátjuk" — hanem
               előre egyeztetett műszaki tartalom és tiszta költségek.
-            </p>
+            </p> -->
           </div>
         </div>
 
@@ -267,7 +267,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="includes-section">
+        <div class="includes-section d-none">
           <h2 class="section-heading">Mennyibe kerül a festés?</h2>
           <div class="includes-grid">
             <div class="include-item">
@@ -293,7 +293,7 @@ onMounted(() => {
         </div>
 
         <!-- HOGYAN MŰKÖDIK SECTION -->
-        <div class="process-section">
+        <div class="process-section d-none">
           <h2 class="section-heading">Hogyan dolgozunk festésnél?</h2>
           <div class="process-steps">
             <div class="process-step">
@@ -388,7 +388,7 @@ onMounted(() => {
         </div>
 
         <!-- ZÁRÓ CTA SECTION -->
-        <div class="closing-cta-section">
+        <div class="closing-cta-section d-none">
           <h2 class="section-heading">Kér egy gyors, reális festés árat?</h2>
           <p class="closing-message">
             <strong
@@ -414,7 +414,10 @@ onMounted(() => {
         <!-- CONTACT METHOD CHOICE -->
         <div class="safety-bridge">
           <p class="safety-bridge__text">
-            <strong>Minden festés más.</strong>
+            <strong
+              >Minden festés más. Az egyeztetés nem jár
+              kötelezettséggel.</strong
+            >
             Az egyeztetés során végigkérdezzük a részleteket (felület állapota,
             glettelés igénye, rétegrend), és őszintén megmondjuk, mi a reális
             megoldás.
@@ -425,6 +428,12 @@ onMounted(() => {
           <p class="choice-intro">
             Válassza ki, hogyan egyeztessünk festésről.
           </p>
+          <div class="choice-phone-inline">
+            <span class="choice-phone-inline__label">Hívás most:</span>
+            <a href="tel:+36203475029" class="choice-phone-inline__link">
+              +36 20 347 5029
+            </a>
+          </div>
           <div class="choice-buttons">
             <button
               class="choice-btn choice-btn--phone"
@@ -510,7 +519,7 @@ onMounted(() => {
                   v-model="formData.name"
                   required
                   class="form-input"
-                  placeholder="Keresztnév és vezetéknév"
+                  placeholder="Név"
                   :disabled="isSubmitting"
                 />
               </div>
@@ -545,7 +554,7 @@ onMounted(() => {
             </div>
 
             <div class="form-section">
-              <h3 class="section-title">Hol van az ingatlan, és mi a cél?</h3>
+              <h3 class="section-title">Megjegyzés ( Nem kötelező )</h3>
 
               <!-- <div class="form-group">
                 <label class="supage-content__ul__li__strong"
@@ -575,16 +584,15 @@ onMounted(() => {
                   :disabled="isSubmitting"
                 />
               </div> -->
-
               <div class="form-group">
                 <label class="supage-content__ul__li__strong"
-                  >Munka röviden ( nem kötelező )</label
+                  >Egyéb információ</label
                 >
                 <input
                   type="text"
                   v-model="formData.model"
                   class="form-input"
-                  placeholder="pl. szobafestés + javítások, glettelés, homlokzat"
+                  placeholder="Írja le bővebben igényeit"
                   :disabled="isSubmitting"
                 />
               </div>

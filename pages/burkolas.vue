@@ -207,7 +207,7 @@ onMounted(() => {
             <h1 class="main-title">
               Burkolás Budapesten – pontos, tételes árajánlattal
             </h1>
-            <div class="keyword-chips" aria-label="Fő előnyök">
+            <!-- <div class="keyword-chips " aria-label="Fő előnyök">
               <span class="keyword-chip">Tételes ajánlat</span>
               <span class="keyword-chip">Rejtett költségek nélkül</span>
               <span class="keyword-chip">Pontos egyeztetés</span>
@@ -233,7 +233,7 @@ onMounted(() => {
             <p class="banner-value-prop">
               Célunk, hogy burkolásnál se legyen "majd a végén meglátjuk" —
               hanem előre egyeztetett műszaki tartalom és tiszta költségek.
-            </p>
+            </p> -->
           </div>
         </div>
 
@@ -268,7 +268,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="includes-section">
+        <div class="includes-section d-none">
           <h2 class="section-heading">Mennyibe kerül a burkolás?</h2>
           <div class="includes-grid">
             <div class="include-item">
@@ -298,7 +298,7 @@ onMounted(() => {
         </div>
 
         <!-- HOGYAN MŰKÖDIK SECTION -->
-        <div class="process-section">
+        <div class="process-section d-none">
           <h2 class="section-heading">Hogyan dolgozunk burkolásnál?</h2>
           <div class="process-steps">
             <div class="process-step">
@@ -393,7 +393,7 @@ onMounted(() => {
         </div>
 
         <!-- ZÁRÓ CTA SECTION -->
-        <div class="closing-cta-section">
+        <div class="closing-cta-section d-none">
           <h2 class="section-heading">Kér egy gyors, reális burkolás árat?</h2>
           <p class="closing-message">
             <strong
@@ -419,7 +419,10 @@ onMounted(() => {
         <!-- CONTACT METHOD CHOICE -->
         <div class="safety-bridge">
           <p class="safety-bridge__text">
-            <strong>Minden burkolás más.</strong>
+            <strong
+              >Minden burkolás más. Az egyeztetés nem jár
+              kötelezettséggel.</strong
+            >
             Az egyeztetés során végigkérdezzük a részleteket (felület, burkolat,
             előkészítés), és őszintén megmondjuk, mi a reális megoldás.
           </p>
@@ -429,6 +432,12 @@ onMounted(() => {
           <p class="choice-intro">
             Válassza ki, hogyan egyeztessünk burkolásról.
           </p>
+          <div class="choice-phone-inline">
+            <span class="choice-phone-inline__label">Hívás most:</span>
+            <a href="tel:+36203475029" class="choice-phone-inline__link">
+              +36 20 347 5029
+            </a>
+          </div>
           <div class="choice-buttons">
             <button
               class="choice-btn choice-btn--phone"
@@ -517,7 +526,7 @@ onMounted(() => {
                   v-model="formData.name"
                   required
                   class="form-input"
-                  placeholder="Keresztnév és vezetéknév"
+                  placeholder="Név"
                   :disabled="isSubmitting"
                 />
               </div>
@@ -552,7 +561,7 @@ onMounted(() => {
             </div>
 
             <div class="form-section">
-              <h3 class="section-title">Hol van az ingatlan, és mi a cél?</h3>
+              <h3 class="section-title">Megjegyzés ( Nem kötelező )</h3>
 
               <!-- <div class="form-group">
                 <label class="supage-content__ul__li__strong"
@@ -585,13 +594,13 @@ onMounted(() => {
 
               <div class="form-group">
                 <label class="supage-content__ul__li__strong"
-                  >Munka röviden ( nem kötelező )</label
+                  >Egyéb információ</label
                 >
                 <input
                   type="text"
                   v-model="formData.model"
                   class="form-input"
-                  placeholder="pl. teljes felújítás, festés + burkolás, fürdő csere"
+                  placeholder="Írja le bővebben igényeit"
                   :disabled="isSubmitting"
                 />
               </div>
@@ -955,6 +964,33 @@ body > footer {
 .closing-cta-section .section-heading {
   color: #fff;
   margin-top: 0;
+}
+
+.choice-phone-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: -12px 0 22px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.choice-phone-inline__label {
+  opacity: 0.85;
+}
+
+.choice-phone-inline__link {
+  color: #a2141e;
+  text-decoration: none;
+  font-family: 'Bakbak One', sans-serif;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.choice-phone-inline__link:hover {
+  text-decoration: underline;
 }
 
 .closing-message {
