@@ -207,6 +207,39 @@ onMounted(() => {
             <h1 class="main-title">
               Burkolás Budapesten – pontos, tételes árajánlattal
             </h1>
+
+            <div class="hero-benefits" aria-label="Fő előnyök">
+              <div class="hero-benefit-card">
+                <div class="hero-benefit-check">✓</div>
+                <div class="hero-benefit-text">
+                  <div class="hero-benefit-title">Ingyenes felmérés</div>
+                  <div class="hero-benefit-desc">
+                    Helyszíni egyeztetés és tanácsadás Budapest + 50 km
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-benefit-card">
+                <div class="hero-benefit-check">✓</div>
+                <div class="hero-benefit-text">
+                  <div class="hero-benefit-title">Csúcs minőség</div>
+                  <div class="hero-benefit-desc">
+                    Precíz burkolás, szép vágások, egyenes fugák, tiszta átadás
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-benefit-card">
+                <div class="hero-benefit-check">✓</div>
+                <div class="hero-benefit-text">
+                  <div class="hero-benefit-title">Megfizethető ár</div>
+                  <div class="hero-benefit-desc">
+                    Tételes ajánlat, rejtett költségek nélkül
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- <div class="keyword-chips " aria-label="Fő előnyök">
               <span class="keyword-chip">Tételes ajánlat</span>
               <span class="keyword-chip">Rejtett költségek nélkül</span>
@@ -430,7 +463,7 @@ onMounted(() => {
 
         <div class="contact-choice">
           <p class="choice-intro">
-            Válassza ki, hogyan egyeztessünk burkolásról.
+            KÉRJEN INGYENES FELMÉRÉST
           </p>
           <div class="choice-phone-inline">
             <span class="choice-phone-inline__label">Hívás most:</span>
@@ -726,6 +759,58 @@ body > footer {
     inset 0 0 70px rgba(var(--primary-rgb), 0.45);
 }
 
+.hero-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 980px;
+  margin: 22px auto 0 auto;
+}
+
+.hero-benefit-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 18px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.hero-benefit-check {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  flex: 0 0 auto;
+}
+
+.hero-benefit-title {
+  font-family: 'Bakbak One', sans-serif;
+  letter-spacing: 0.4px;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.02rem;
+  line-height: 1.2;
+}
+
+.hero-benefit-desc {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
 .keyword-chips {
   display: flex;
   flex-wrap: wrap;
@@ -811,6 +896,13 @@ body > footer {
   line-height: 1.6;
   margin-bottom: 25px;
   opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+  .hero-benefits {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
 }
 
 /* ========== BIZALOM MODUL ========== */

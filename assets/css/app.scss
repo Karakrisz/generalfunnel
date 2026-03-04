@@ -30,6 +30,52 @@ h2 {
   }
 }
 
+.contact-choice .choice-intro {
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+  font-size: 1.55rem !important;
+  color: var(--primary, #a2141e) !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 26px !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) !important;
+  animation: choiceIntroPulse 1.6s ease-in-out infinite !important;
+}
+
+.contact-choice .choice-intro::after {
+  content: '▼';
+  font-size: 1.35rem;
+  line-height: 1;
+  opacity: 0.95;
+  animation: choiceIntroArrow 1.05s ease-in-out infinite;
+}
+
+@keyframes choiceIntroPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes choiceIntroArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+
 .d-none {
   display: none;
 }
