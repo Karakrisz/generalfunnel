@@ -274,28 +274,28 @@ onMounted(() => {
         <div class="trust-module">
           <div class="trust-item">
             <div class="trust-content">
-              <h4>Gyors árkép — valós tartalom alapján</h4>
+              <h4>MEGBÍZHATÓSÁG — HATÁRIDŐRE ÉRKEZÜNK</h4>
               <p>
-                Pár kérdés alapján megmondjuk, mi a reális irány — és mire kell
-                figyelni, hogy ne csússzon el a költség.
+                Pontosan érkezünk, tartjuk a megbeszélt határidőt. A munkát nem
+                hagyjuk félbe.
               </p>
             </div>
           </div>
           <div class="trust-item">
             <div class="trust-content">
-              <h4>Tételes ajánlat — kevesebb meglepetés</h4>
+              <h4>PRECÍZ KŐMŰVES MUNKA — EGYENES SÍKOK</h4>
               <p>
-                Nem csak egy m2 ár. Tételesen látja a munkadíjat, az
-                előkészítést és a kiegészítő tételeket is.
+                Pontos falazás/javítás, szintben lévő felületek, korrekt
+                helyreállítás.
               </p>
             </div>
           </div>
           <div class="trust-item">
             <div class="trust-content">
-              <h4>Megbízható kivitelezés — tiszta kommunikáció</h4>
+              <h4>KISZÁMÍTHATÓ ÁR — REJTETT KÖLTSÉG NÉLKÜL</h4>
               <p>
-                Végig tudja, mi történik és mikor. Az egyeztetés célja, hogy
-                nyugodtan döntsön — nem az, hogy rábeszéljük.
+                Előre egyeztetett, átlátható tételek. Nincsenek utólagos
+                meglepetések.
               </p>
             </div>
           </div>
