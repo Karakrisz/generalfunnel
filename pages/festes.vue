@@ -632,7 +632,7 @@ onMounted(() => {
 
             <button type="submit" class="submit-btn" :disabled="isSubmitting">
               <span class="btn-text" v-if="!isSubmitting"
-                >Díjmentes felmérést igénylése</span
+                >Díjmentes felmérés igénylése</span
               >
               <span class="btn-text" v-else>Küldés...</span>
             </button>
