@@ -415,8 +415,7 @@ onMounted(() => {
 
         <div class="closing-cta-section">
           <p class="closing-cta-lead">
-            Általában 5–10 perc alatt tisztázható, hogy mi befolyásolja
-            leginkább a burkolás árát.
+            Általában 5–10 perc alatt tisztázható, minden fontos szempont amire figyelni kell.
           </p>
           <h2 class="section-heading">
             Kérek gyors telefonos egyeztetést burkolásról
