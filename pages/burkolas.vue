@@ -292,7 +292,8 @@ onMounted(() => {
             <div class="include-item">
               <span class="include-check">?</span>
               <span
-                ><strong>Aljzat:</strong> benne van-e javítás/szintezés, vagy ezt plusz költségnek minősül?</span
+                ><strong>Aljzat:</strong> benne van-e javítás/szintezés, vagy
+                ezt plusz költségnek minősül?</span
               >
             </div>
             <div class="include-item">
@@ -537,7 +538,7 @@ body > footer {
   padding-top: 4px;
   padding-bottom: 4px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #3a3a3a;
 }
 
