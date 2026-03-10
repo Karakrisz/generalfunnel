@@ -315,8 +315,9 @@ onMounted(() => {
             3 dolog, amit érdemes tudni burkolás előtt
           </h2>
           <p class="price-bridge">
-            Pár szakértői szempont, amit érdemes előre tisztázni, hogy a
-            burkolás tartós legyen, és a végén ne legyenek meglepetések.
+            Pár szakértői tanács, ha más kivitelezőkkel veszi fel a kapcsolatot,
+            amit érdemes előre tisztázni, hogy a burkolás tartós legyen, és a
+            végén ne legyenek meglepetések.
           </p>
           <div class="includes-grid">
             <div class="include-item">
@@ -479,7 +480,7 @@ onMounted(() => {
             </button>
 
             <p class="call-direct">
-              Inkább felhívom:
+              Inkább felhívom (Kovács Balázs, szakértőtechnikus):
               <a class="call-direct__link" href="tel:+36203475029"
                 >+36 20 347 5029</a
               >
