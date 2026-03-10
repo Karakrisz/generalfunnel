@@ -278,7 +278,10 @@ onMounted(() => {
           <p class="price-bridge">
             Megtévesztően alacsony „Ft/m²” árakat sok hirdetésben lehet látni.
             Ezek gyakran csak a legegyszerűbb burkolás munkadíjára vonatkoznak,
-            és csak később derül ki, mi minden kerül még külön felszámításra.
+            <i
+              >és sokszor csak később derül ki, mi minden kerül még külön
+              felszámításra.</i
+            >
           </p>
 
           <p class="price-bridge">
@@ -318,12 +321,13 @@ onMounted(() => {
 
         <div class="includes-section">
           <h2 class="section-heading">
-            3 dolog, amit érdemes a szerződésben rögzíteni
+            3 dolog, amit javasolt a szerződésben rögzíteni
           </h2>
           <p class="price-bridge">
-            Pár szakértői tanács, ha más kivitelezőkkel veszi fel a kapcsolatot,
-            amit érdemes előre tisztázni, hogy a burkolás tartós legyen, és a
-            végén ne legyenek meglepetések.
+            Pár szakértői tanács, ha több kivitelezőtől is kér árat. Ezeket a
+            pontokat érdemes már a megbízás előtt tisztázni és a szerződésben
+            rögzíteni, hogy a burkolás tartós legyen, és később ne legyenek
+            félreértések.
           </p>
           <div class="includes-grid">
             <div class="include-item">
@@ -363,8 +367,8 @@ onMounted(() => {
           </div>
 
           <p class="price-bridge">
-            Ha szeretné, egy rövid egyeztetés során végigmegyünk ezeken a
-            pontokon, és segítünk tisztábban látni minden fontos szempontot.
+            Reméljük, hogy ezek a szempontok segítenek a döntésben. Ha szeretné,
+            egy rövid egyeztetés során szívesen végigmegyünk ezeken a pontokon.
           </p>
         </div>
 
@@ -477,7 +481,7 @@ onMounted(() => {
 
             <button type="submit" class="submit-btn" :disabled="isSubmitting">
               <span class="btn-text" v-if="!isSubmitting"
-                >Kérek gyors telefonos egyeztetést</span
+                >Kérem a díjmentes tanácsadást</span
               >
               <span class="btn-text" v-else>Küldés...</span>
             </button>
@@ -725,7 +729,7 @@ body > footer {
 .hero-subtitle {
   margin: 14px auto 0;
   max-width: 980px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.55;
   font-weight: 650;
   color: rgba(255, 255, 255, 0.94);
@@ -875,11 +879,11 @@ body > footer {
 
 /* ========== INCLUDES SECTION ========== */
 .includes-section {
-  margin: 4em 0;
+  margin: 4em 0 1.8em 0;
 }
 
 .price-bridge {
-  margin: 18px 0 0 0;
+  margin: 30px 0 0 0;
   text-align: center;
   color: #222;
   font-weight: 800;
@@ -1005,8 +1009,9 @@ body > footer {
 .safety-bridge__text {
   margin: 0;
   color: #222;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.55;
+  text-align: center;
 }
 
 .safety-bridge__text strong {
