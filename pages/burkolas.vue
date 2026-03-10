@@ -222,10 +222,10 @@ onMounted(() => {
               <div class="hero-benefit-card">
                 <div class="hero-benefit-check">✓</div>
                 <div class="hero-benefit-text">
-                  <div class="hero-benefit-title">Tételes ajánlat</div>
+                  <div class="hero-benefit-title">Díjmentes tanácsadás</div>
                   <div class="hero-benefit-desc">
-                    Átlátható tételekkel segítünk, hogy könnyebb legyen tisztán
-                    látni és dönteni
+                    Röviden átbeszéljük a lényeget, hogy tisztább képet kapjon
+                    az egészről
                   </div>
                 </div>
               </div>
@@ -292,8 +292,7 @@ onMounted(() => {
             <div class="include-item">
               <span class="include-check">?</span>
               <span
-                ><strong>Aljzat:</strong> benne van-e javítás/szintezés, és
-                milyen rétegrenddel számolnak?</span
+                ><strong>Aljzat:</strong> benne van-e javítás/szintezés, vagy ezt plusz költségnek minősül?</span
               >
             </div>
             <div class="include-item">
