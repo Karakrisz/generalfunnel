@@ -224,7 +224,8 @@ onMounted(() => {
                 <div class="hero-benefit-text">
                   <div class="hero-benefit-title">Tételes ajánlat</div>
                   <div class="hero-benefit-desc">
-                    Nincs a végén meglepetés — tisztán látja a tételeket
+                    Átlátható tételekkel segítünk, hogy könnyebb legyen tisztán
+                    látni és dönteni
                   </div>
                 </div>
               </div>
@@ -415,7 +416,8 @@ onMounted(() => {
 
         <div class="closing-cta-section">
           <p class="closing-cta-lead">
-            Általában 5–10 perc alatt tisztázható, minden fontos szempont amire figyelni kell.
+            Általában 5–10 perc alatt tisztázható, minden fontos szempont amire
+            figyelni kell.
           </p>
           <h2 class="section-heading">
             Kérek gyors telefonos egyeztetést burkolásról
@@ -476,6 +478,13 @@ onMounted(() => {
               <span class="btn-text" v-else>Küldés...</span>
             </button>
 
+            <p class="call-direct">
+              Inkább felhívom:
+              <a class="call-direct__link" href="tel:+36203475029"
+                >+36 20 347 5029</a
+              >
+            </p>
+
             <p class="privacy-text">
               <i class="supage-content__p__i">
                 Az űrlap elküldésével automatikusan elfogadja az
@@ -520,6 +529,23 @@ nav,
 body > header,
 body > footer {
   display: none !important;
+}
+
+.call-direct {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+  font-size: 14px;
+  color: #3a3a3a;
+}
+
+.call-direct__link {
+  font-weight: 700;
+  color: #a2141e;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .subpage-content {
