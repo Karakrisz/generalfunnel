@@ -122,7 +122,7 @@ const submitForm = async (event) => {
         licensePlate: '',
         brand: '',
         model: '',
-        service: '',
+        service: 'festes_burkolas_kartonozas',
         name: '',
         email: '',
         phone: '',
@@ -205,16 +205,16 @@ onMounted(() => {
 
           <div class="banner-content">
             <h1 class="main-title">
-              Burkolás Budapesten – pontos, tételes árajánlattal
+              Burkolás Budapesten – gyors árbecslés egyeztetés után
             </h1>
 
             <div class="hero-benefits" aria-label="Fő előnyök">
               <div class="hero-benefit-card">
                 <div class="hero-benefit-check">✓</div>
                 <div class="hero-benefit-text">
-                  <div class="hero-benefit-title">Ingyenes felmérés</div>
+                  <div class="hero-benefit-title">Gyors egyeztetés</div>
                   <div class="hero-benefit-desc">
-                    Helyszíni egyeztetés és tanácsadás Budapest + 50 km
+                    Telefonon reális ár-sáv, pár kérdés alapján
                   </div>
                 </div>
               </div>
@@ -222,9 +222,9 @@ onMounted(() => {
               <div class="hero-benefit-card">
                 <div class="hero-benefit-check">✓</div>
                 <div class="hero-benefit-text">
-                  <div class="hero-benefit-title">Csúcs minőség</div>
+                  <div class="hero-benefit-title">Tételes ajánlat</div>
                   <div class="hero-benefit-desc">
-                    Precíz burkolás, szép vágások, egyenes fugák, tiszta átadás
+                    Nincs a végén meglepetés — tisztán látja a tételeket
                   </div>
                 </div>
               </div>
@@ -232,9 +232,9 @@ onMounted(() => {
               <div class="hero-benefit-card">
                 <div class="hero-benefit-check">✓</div>
                 <div class="hero-benefit-text">
-                  <div class="hero-benefit-title">Megfizethető ár</div>
+                  <div class="hero-benefit-title">Budapest + 50 km</div>
                   <div class="hero-benefit-desc">
-                    Tételes ajánlat, rejtett költségek nélkül
+                    Kiszállás és kivitelezés a környéken is
                   </div>
                 </div>
               </div>
@@ -270,63 +270,93 @@ onMounted(() => {
           </div>
         </div>
 
-        <!-- BIZALOM MODUL -->
-        <div class="trust-module">
-          <div class="trust-item">
-            <div class="trust-content">
-              <h4>MEGBÍZHATÓSÁG — HATÁRIDŐRE ÉRKEZÜNK</h4>
-              <p>
-                Pontosan érkezünk, tartjuk a megbeszélt határidőt. A munkát nem
-                hagyjuk félbe.
-              </p>
+        <div class="includes-section">
+          <h2 class="section-heading">Mennyibe kerül a burkolás?</h2>
+          <p class="price-bridge">
+            Megtévesztően alacsony „Ft/m2” árakat sok hirdetésben lehet látni.
+            Ezek gyakran csak a legegyszerűbb burkolás munkadíjára vonatkoznak.
+            Ha több helyről kér árat,
+            <strong>mindenképpen tisztázza előre</strong>
+            ezt a 3 kérdést — így az ajánlatok tartalma összehasonlítható lesz:
+          </p>
+
+          <div class="includes-grid">
+            <div class="include-item">
+              <span class="include-check">?</span>
+              <span
+                ><strong>Mi van benne pontosan az m2 árban?</strong> (csak
+                burkolás, vagy előkészítés is)</span
+              >
+            </div>
+            <div class="include-item">
+              <span class="include-check">?</span>
+              <span
+                ><strong>Aljzat:</strong> benne van-e javítás/szintezés, és
+                milyen rétegrenddel számolnak?</span
+              >
+            </div>
+            <div class="include-item">
+              <span class="include-check">?</span>
+              <span
+                ><strong>Részletek:</strong> benne vannak-e a kivágások/sarkok,
+                illetve fürdő/terasz esetén a vízszigetelés és lejtések?</span
+              >
             </div>
           </div>
-          <div class="trust-item">
-            <div class="trust-content">
-              <h4>PRECÍZ BURKOLÁS — EGYENES FUGÁK</h4>
-              <p>
-                Milliméter pontos burkolás, szép vágások, tökéletesen egyenes
-                fugák.
-              </p>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-content">
-              <h4>KISZÁMÍTHATÓ ÁR — REJTETT KÖLTSÉG NÉLKÜL</h4>
-              <p>
-                Előre egyeztetett, átlátható tételek. Nincsenek utólagos
-                meglepetések.
-              </p>
-            </div>
-          </div>
+
+          <p class="price-bridge d-none">
+            Ezek a tényezők számítanak leggyakrabban:
+          </p>
         </div>
 
-        <div class="includes-section d-none">
-          <h2 class="section-heading">Mennyibe kerül a burkolás?</h2>
+        <div class="includes-section">
+          <h2 class="section-heading">
+            3 dolog, amit érdemes tudni burkolás előtt
+          </h2>
+          <p class="price-bridge">
+            Pár szakértői szempont, amit érdemes előre tisztázni, hogy a
+            burkolás tartós legyen, és a végén ne legyenek meglepetések.
+          </p>
           <div class="includes-grid">
             <div class="include-item">
               <span class="include-check">✓</span>
               <span
-                >Az ár függ a felülettől, burkolat típusától és a mintától</span
+                ><strong>Aljzat állapota</strong><br />
+                Ha a felület hullámos, repedt vagy nem teljesen sík, azt a
+                kivitelezőnek burkolás előtt
+                <strong>mindenképp rendbe kell tennie</strong> (javítás,
+                kiegyenlítés, szintezés). Ha bármelyik céget bízza meg a
+                munkával, ezt nyugodtan <strong>rögzítse elvárásként</strong> —
+                ettől lesz a burkolat stabil és tartós.</span
               >
             </div>
             <div class="include-item">
               <span class="include-check">✓</span>
               <span
-                >Előkészítés: bontás, aljzat javítás, vízszigetelés sokat
-                számít</span
+                ><strong>Sarkok, kivágások és illesztések</strong><br />
+                Minél több sarok, csőkiállás vagy vágás van egy helyiségben,
+                annál több időt és precíz munkát igényel a burkolás. Ezért
+                fontos, hogy ezek is bele legyenek írva az ajánlatba. Ha más
+                kivitelezőt bíz meg, ezt is nyugodtan kérje
+                <strong>tételesen, előre rögzítve</strong> a szerződésben.</span
               >
             </div>
             <div class="include-item">
               <span class="include-check">✓</span>
               <span
-                >Részletek: sarkok, élvédők, fugázás, szilikonozás,
-                szegélyek</span
+                ><strong>Vízszigetelés és lejtések</strong><br />
+                Fürdőszobánál és terasznál érdemes előre tisztázni, hogy
+                készül-e vízszigetelés és megfelelő lejtés. Ez sok későbbi
+                problémát tud megelőzni. Bármelyik céggel dolgozik, érdemes ezt
+                <strong>külön elvárásként kimondani</strong>: mi készül, hol, és
+                milyen rétegrenddel.</span
               >
             </div>
           </div>
+
           <p class="price-bridge">
-            Szeretne gyors ár-sávot tudni? Kérjen a lap alján visszahívást.
+            Ha szeretné, egy rövid egyeztetés során végigmegyünk ezeken a
+            pontokon, és segítünk tisztábban látni minden fontos szempontot.
           </p>
         </div>
 
@@ -377,176 +407,25 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="includes-section">
-          <h2 class="section-heading">
-            Akik már minket választottak burkolási és kivitelezési munkáknál
-          </h2>
-          <div class="includes-grid">
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>CTP Management Hungary Kft.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>BOHN Mélyépítő Kft.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>West Hungaria Bau Kft.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>Máltai Szeretetszolgálat</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>Üjlaki Építő Kft.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>Transport 2000. Kft.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>OMS 24 Zrt.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>Land-Bau Kft.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>Progress Étterem-hálózat Kft.</span>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <span>Magánszemélyek</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ZÁRÓ CTA SECTION -->
-        <div class="closing-cta-section d-none">
-          <h2 class="section-heading">Kér egy gyors, reális burkolás árat?</h2>
-          <p class="closing-message">
-            <strong
-              >Az egyeztetés nem jár kötelezettséggel. Ha nem mi vagyunk a
-              legjobb megoldás az Ön burkolásához, ezt is őszintén
-              megmondjuk.</strong
-            >
-          </p>
-          <p class="closing-message">
-            Rövid egyeztetés után megmondjuk, mi befolyásolja leginkább az árat,
-            milyen műszaki tartalommal érdemes számolni, és hogyan lehet
-            elkerülni a plusz tételeket. <br /><br />
-            <i
-              ><strong
-                >Ha szeretné, készítünk egy tiszta, tételes ajánlatot:</strong
-              >
-              töltse ki az űrlapot, és visszahívjuk egyeztetésre. Ha gyors
-              kérdése van, telefonáljon.</i
-            >
-          </p>
-        </div>
-
-        <!-- CONTACT METHOD CHOICE -->
         <div class="safety-bridge">
           <p class="safety-bridge__text">
-            <strong
-              >Minden burkolás más. Az egyeztetés nem jár
-              kötelezettséggel.</strong
-            >
-            Az egyeztetés során végigkérdezzük a részleteket (felület, burkolat,
-            előkészítés), és őszintén megmondjuk, mi a reális megoldás.
+            <strong>Az egyeztetés díj és kötelezettség mentes.</strong>
           </p>
         </div>
 
-        <div class="contact-choice">
-          <p class="choice-intro">KÉRJEN INGYENES FELMÉRÉST</p>
-          <div class="choice-phone-inline">
-            <span class="choice-phone-inline__label">Hívás most:</span>
-            <a href="tel:+36203475029" class="choice-phone-inline__link">
-              +36 20 347 5029
-            </a>
-          </div>
-          <div class="choice-buttons">
-            <button
-              class="choice-btn choice-btn--phone"
-              :class="{ active: contactMethod === 'phone' }"
-              @click="contactMethod = 'phone'"
-            >
-              <span class="choice-icon">☎️</span>
-              <span class="choice-text"
-                >Kérek gyors egyeztetést burkolásról</span
-              >
-            </button>
-            <button
-              class="choice-btn choice-btn--form"
-              :class="{ active: contactMethod === 'form' }"
-              @click="contactMethod = 'form'"
-            >
-              <span class="choice-icon">📝</span>
-              <span class="choice-text"
-                >Szeretnék tételes burkolás ajánlatot</span
-              >
-            </button>
-          </div>
-        </div>
-
-        <!-- PHONE CARD -->
-        <div v-if="contactMethod === 'phone'" class="contact-section">
-          <div class="phone-card">
-            <div class="phone-card-icon">☎️</div>
-            <h3 class="phone-card-title">Hívjon most — egyeztessünk</h3>
-            <p class="phone-card-subtitle">
-              ReBaco Kft. – burkolás Budapesten és környékén
-            </p>
-            <a href="tel:+36203475029" class="phone-button">
-              <span class="phone-icon">📞</span>
-              <span class="phone-number">+36 20 347 5029</span>
-            </a>
-            <div class="phone-info">
-              <p>
-                <strong>Gyors egyeztetés burkolásról</strong>
-              </p>
-              <p class="small">
-                Felület, burkolat, előkészítés – és mondjuk a következő lépést
-              </p>
-            </div>
-            <div class="phone-benefits">
-              <div class="benefit">✓ Hideg- és melegburkolás</div>
-              <div class="benefit">✓ Fürdőszoba, terasz, lakás burkolás</div>
-              <div class="benefit">✓ Budapest + 50 km</div>
-            </div>
-          </div>
+        <div class="closing-cta-section">
+          <p class="closing-cta-lead">
+            Általában 5–10 perc alatt tisztázható, hogy mi befolyásolja
+            leginkább a burkolás árát.
+          </p>
+          <h2 class="section-heading">
+            Kérek gyors telefonos egyeztetést burkolásról
+          </h2>
         </div>
 
         <!-- FORM -->
-        <div v-if="contactMethod === 'form'" class="contact-section">
+        <div class="contact-section">
           <form class="appointment-form" @submit="submitForm">
-            <div class="form-section">
-              <h3 class="section-title">Milyen szolgáltatásra van szüksége?</h3>
-
-              <div class="form-group">
-                <label class="supage-content__ul__li__strong"
-                  >Szolgáltatás *</label
-                >
-                <select
-                  v-model="formData.service"
-                  required
-                  class="form-select"
-                  :disabled="isSubmitting"
-                >
-                  <option value="">Válasszon szolgáltatást...</option>
-                  <option value="festes_burkolas_kartonozas">
-                    Burkolás / csempézés – Hideg- és melegburkolás, fürdőszoba,
-                    terasz
-                  </option>
-                  <option value="egyeb">Egyéb</option>
-                </select>
-              </div>
-            </div>
-
             <div class="form-section">
               <h3 class="section-title">Elérhetőségek</h3>
 
@@ -591,55 +470,9 @@ onMounted(() => {
               </div>
             </div>
 
-            <div class="form-section">
-              <h3 class="section-title">Megjegyzés ( Nem kötelező )</h3>
-
-              <!-- <div class="form-group">
-                <label class="supage-content__ul__li__strong"
-                  >Település / kerület *</label
-                >
-                <input
-                  type="text"
-                  v-model="formData.licensePlate"
-                  required
-                  class="form-input"
-                  placeholder="pl. Budapest XI., Érd, Gödöllő"
-                  style="text-transform: uppercase"
-                  :disabled="isSubmitting"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="supage-content__ul__li__strong"
-                  >Ingatlan típusa *</label
-                >
-                <input
-                  type="text"
-                  v-model="formData.brand"
-                  required
-                  class="form-input"
-                  placeholder="pl. lakás, családi ház, sorház"
-                  :disabled="isSubmitting"
-                />
-              </div> -->
-
-              <div class="form-group">
-                <label class="supage-content__ul__li__strong"
-                  >Egyéb információ</label
-                >
-                <input
-                  type="text"
-                  v-model="formData.model"
-                  class="form-input"
-                  placeholder="Írja le bővebben igényeit"
-                  :disabled="isSubmitting"
-                />
-              </div>
-            </div>
-
             <button type="submit" class="submit-btn" :disabled="isSubmitting">
               <span class="btn-text" v-if="!isSubmitting"
-                >Díjmentes felmérés igénylése</span
+                >Kérek gyors telefonos egyeztetést</span
               >
               <span class="btn-text" v-else>Küldés...</span>
             </button>
@@ -1042,18 +875,29 @@ body > footer {
 
 /* ========== CLOSING CTA SECTION ========== */
 .closing-cta-section {
-  background: var(--primary);
-  color: #fff;
-  padding: 40px 30px;
+  background: #fff;
+  color: var(--text);
+  padding: 28px 24px;
   border-radius: 15px;
   text-align: center;
-  margin: 3em 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 2.2em 0 1.2em 0;
+  border: 2px solid rgba(var(--primary-rgb), 0.18);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
 .closing-cta-section .section-heading {
-  color: #fff;
-  margin-top: 0;
+  color: var(--primary);
+  margin: 0;
+}
+
+.closing-cta-lead {
+  margin: 0 0 10px 0;
+  color: rgba(0, 0, 0, 0.72);
+  font-weight: 700;
+  line-height: 1.45;
+  font-size: 1.02rem;
 }
 
 .choice-phone-inline {
