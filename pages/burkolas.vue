@@ -204,11 +204,13 @@ onMounted(() => {
           </div>
 
           <div class="banner-content">
-            <h1 class="main-title">
-              Burkolás Budapesten – gyors árbecslés egyeztetés után
+            <h1 class="hero-subtitle">
+              Ha több kivitelezőtől kér burkolásra árat, érdemes tisztázni mi
+              van benne – mert a „m² ár” sokszor teljesen mást jelent különböző
+              ajánlatoknál.
             </h1>
 
-            <div class="hero-benefits" aria-label="Fő előnyök">
+            <div class="hero-benefits d-none" aria-label="Fő előnyök">
               <div class="hero-benefit-card">
                 <div class="hero-benefit-check">✓</div>
                 <div class="hero-benefit-text">
@@ -274,11 +276,15 @@ onMounted(() => {
         <div class="includes-section">
           <h2 class="section-heading">Mennyibe kerül a burkolás?</h2>
           <p class="price-bridge">
-            Megtévesztően alacsony „Ft/m2” árakat sok hirdetésben lehet látni.
-            Ezek gyakran csak a legegyszerűbb burkolás munkadíjára vonatkoznak.
-            Ha több helyről kér árat,
-            <strong>mindenképpen tisztázza előre</strong>
-            ezt a 3 kérdést — így az ajánlatok tartalma összehasonlítható lesz:
+            Megtévesztően alacsony „Ft/m²” árakat sok hirdetésben lehet látni.
+            Ezek gyakran csak a legegyszerűbb burkolás munkadíjára vonatkoznak,
+            és csak később derül ki, mi minden kerül még külön felszámításra.
+          </p>
+
+          <p class="price-bridge">
+            Ha több helyről kér árat, érdemes előre tisztázni ezt a 3 kérdést —
+            így az ajánlatok tartalma valóban összehasonlítható lesz, és nem
+            kell feleslegesen időt tölteni az egyeztetésekkel.
           </p>
 
           <div class="includes-grid">
@@ -312,7 +318,7 @@ onMounted(() => {
 
         <div class="includes-section">
           <h2 class="section-heading">
-            3 dolog, amit érdemes tudni burkolás előtt
+            3 dolog, amit érdemes a szerződésben rögzíteni
           </h2>
           <p class="price-bridge">
             Pár szakértői tanács, ha más kivitelezőkkel veszi fel a kapcsolatot,
@@ -411,17 +417,14 @@ onMounted(() => {
 
         <div class="safety-bridge">
           <p class="safety-bridge__text">
-            <strong>Az egyeztetés díj és kötelezettség mentes.</strong>
+            <strong> <i>Az egyeztetés díj és kötelezettség mentes.</i></strong>
           </p>
         </div>
 
         <div class="closing-cta-section">
-          <p class="closing-cta-lead">
-            Általában 5–10 perc alatt tisztázható, minden fontos szempont amire
-            figyelni kell.
-          </p>
           <h2 class="section-heading">
-            Kérek gyors telefonos egyeztetést burkolásról
+            5–10 percalatt tisztázható, minden fontos szempont amire figyelni
+            kell.
           </h2>
         </div>
 
@@ -524,6 +527,10 @@ nav,
 .navbar,
 .site-header,
 .site-footer {
+  display: none !important;
+}
+
+.d-none {
   display: none !important;
 }
 
@@ -715,6 +722,19 @@ body > footer {
   opacity: 0.96;
 }
 
+.hero-subtitle {
+  margin: 14px auto 0;
+  max-width: 980px;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.94);
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
 .dom-phone-number {
   position: absolute;
   width: 1px;
@@ -892,7 +912,7 @@ body > footer {
 /* ========== SECTION HEADING ========== */
 .section-heading {
   color: var(--primary);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 1.5em 0 1.5em 0;
   text-align: center;
@@ -985,7 +1005,7 @@ body > footer {
 .safety-bridge__text {
   margin: 0;
   color: #222;
-  font-size: 0.98rem;
+  font-size: 1.1rem;
   line-height: 1.55;
 }
 
